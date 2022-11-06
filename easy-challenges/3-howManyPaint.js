@@ -2,6 +2,13 @@
 
 // n is the number of square meters I can paint.
 // w and h are the widths and heights of a single wall in meters.
+
+const howManyWalls = (n, w, h) => {
+  return parseInt(n / (w * h));
+};
+
+console.log(howManyWalls(41, 3, 6));
+
 // Examples
 // howManyWalls(100, 4, 5) ➞ 5
 

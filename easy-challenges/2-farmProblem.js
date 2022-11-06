@@ -5,6 +5,12 @@
 // pigs = 4 legs
 // The farmer has counted his animals and he gives you a subtotal for each species. You have to implement a function that returns the total number of legs of all the animals.
 
+const animals = (chickens, cows, pigs) => {
+  return chickens * 2 + cows * 4 + pigs * 4;
+};
+
+console.log(animals(5, 2, 8));
+
 // Examples
 // animals(2, 3, 5) ➞ 36
 

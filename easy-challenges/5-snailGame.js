@@ -9,6 +9,20 @@
 
 // Array 1: [s, m, f] for Maurice.
 // Array 2: [s, m, f] for Steve.
+
+const mauriceWins = (maurice, steve) => {
+  let mauriceScore = 0;
+  let steveScore = 0;
+
+  maurice[0] > steve[2] ? mauriceScore++ : steveScore++;
+  maurice[1] > steve[0] ? mauriceScore++ : steveScore++;
+  maurice[2] > steve[1] ? mauriceScore++ : steveScore++;
+
+  return mauriceScore > steveScore;
+};
+
+console.log(mauriceWins([1, 8, 20], [2, 9, 100]));
+
 // Examples
 // mauriceWins([3, 5, 10], [4, 7, 11]) ➞ true
 // // Since the matches are (3, 11), (5, 4) and (10, 7), Maurice wins 2 out of 3.
@@ -21,5 +35,3 @@
 // Maurice wins if his competing snail's speed strictly exceeds Steve's snail's speed.
 // Steve will always play in this order: [f, s, m].
 // The order you'll get the snails is always in ascending order.
-
-
